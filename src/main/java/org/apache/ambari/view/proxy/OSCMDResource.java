@@ -128,7 +128,7 @@ public class OSCMDResource extends HttpServlet {
       // Get runtime
         java.lang.Runtime rt = java.lang.Runtime.getRuntime();
         // Start a new process: UNIX command ls
-        java.lang.Process p = rt.exec("ssh "+server+" ls");
+        java.lang.Process p = rt.exec(cmd);
         // You can or maybe should wait for the process to complete
         p.waitFor();
         //System.out.println("Process exited with code = " + rt.exitValue());
